@@ -1,0 +1,22 @@
+<h2>In Search Employee Component</h2>
+<table>
+    <tr>
+        <td>Enter Employee Id</td>
+        <td><input type="text" [(ngModel)]="empId"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Search" (click)="search(empId)"/></td>
+    </tr>
+    <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+            <th>Employee Department</th>
+        </tr>
+        <tr *ngFor="let em of searchedList">
+            <td>{{em.empId}}</td>
+            <td>{{em.empName}}</td>
+            <td>{{em.empSalary}}</td>
+            <td>{{em.empDepartment}}</td>
+        </tr>
+</table>
